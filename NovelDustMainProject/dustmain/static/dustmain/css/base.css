@@ -43,7 +43,7 @@ body {
   padding: 0;
   margin: 0;
   overflow: hidden;
-  background-color: darkslateblue;
+  background-color: black;
 }
 #header_top_NinedusT {
   font-size: 35px;
@@ -52,7 +52,7 @@ body {
 }
 #header_top_NinedusT a {
   text-decoration: none;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: "Times New Roman", Times, serif;
   color: aqua;
 }
 
@@ -81,7 +81,7 @@ body {
   position: relative;
   right: -1px;
   font-size: 0;
-  width: 40px;
+  width: 45px;
   height: 35px;
   background-color: #646464;
   border: none;
@@ -100,17 +100,26 @@ body {
   height: 70%;
 }
 
-/* contentx container */
 
-.contentxcontainer{
-  width: 65%;
+
+/* contentx container */
+.ctxmain{
+  position: relative;
+  transition-duration: 0.4s;
+  margin-left: 11vw;
+}
+
+.indexcontainer {
+  width: 90%;
   position: relative;
   left: 50%;
   transform: translate(-50%);
   padding: 30px 30px;
-  margin:100px 0 ;
-  box-shadow: 0 0 10px black; 
+  margin: 0 0;
+  box-shadow: 0 0 10px black;
+  background-color: white;
 }
+
 
 
 
@@ -120,7 +129,6 @@ body {
   margin-top: auto;
   background-color: rgb(47, 51, 54);
 }
-
 
 /* login page */
 #topContainer1 {

@@ -29,20 +29,3 @@
     <div class="navback last navlowertext"id="hidenavbutton" onclick="hidesidebar()">&times</div>
   </nav>
 </div>
-
-<script>
-  var navbar = document.getElementById("navcontainer");
-  var hiderbutton = document.getElementById("hidenavbutton")
-  function showsidebar() {
-    navbar.classList.add("active_snav");
-    hiderbutton.style.display = 'initial'
-    // navbar.classList.remove('inactive_snav');
-  }
-  function hidesidebar() {
-    event.stopPropagation();
-    navbar.classList.remove("active_snav");
-    hiderbutton.style.display = 'none';
-    
-    // navbar.classList.add('inactive_snav');
-  }
-</script>

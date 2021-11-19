@@ -23,10 +23,20 @@
 
 		{% include "dustmain/navbar.html" %}
 		
-		
-		{% block contentx %}{% endblock contentx %}
+		<div id="ctxmain">
+			{% block contentx %}{% endblock contentx %}
+		</div>
 
 		{% include 'dustmain/footer.html' %}
-	
+
+		<script src=" {% static 'dustmain/js/base.js' %}"></script>
+		
+		{% block script %}
+			{% comment %}  
+					script so that script on other file can 
+					be stored here aka bottom of body
+			{% endcomment %}
+		{% endblock script %}
+
 	</body>
 </html>
