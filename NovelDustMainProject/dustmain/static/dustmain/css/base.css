@@ -14,7 +14,6 @@ html {
 ::-webkit-scrollbar-track-piece {
   background-color: rgb(0, 0, 0);
   border: 1px solid rgb(71, 135, 255);
-  border-style: none solid;
 }
 ::-webkit-scrollbar-thumb {
   min-height: 20;
@@ -44,6 +43,7 @@ body {
   margin: 0;
   overflow: hidden;
   background-color: black;
+  user-select: none;
 }
 #header_top_NinedusT {
   font-size: 35px;
@@ -105,7 +105,7 @@ body {
 /* contentx container */
 .ctxmain{
   position: relative;
-  transition-duration: 0.4s;
+  transition-duration: 0.3s;
   margin-left: 11vw;
 }
 
