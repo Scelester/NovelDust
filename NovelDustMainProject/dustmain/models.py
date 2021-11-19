@@ -1,6 +1,6 @@
 from django.db import models
 
-# Create your models here.
+# for bookname and cover that will actually show upfront.
 class TopBooks(models.Model):
     topname = models.CharField(max_length=200)
     topcover = models.ImageField(upload_to=None,blank=True,null=True)
@@ -8,6 +8,8 @@ class TopBooks(models.Model):
     def __str__(self):
         return self.topname
 
+
+# for bookitems to put inside the topcover
 class BookItems(models.Model):
     topbook = models.ForeignKey(TopBooks, on_delete=models.CASCADE)
     name = models.CharField(max_length=200)
@@ -20,14 +22,14 @@ class BookItems(models.Model):
         return self.name
 
 
-
+# list of genre to append to topbook
 class Genrelist(models.Model):
     name = models.CharField(max_length=60)
     
     def __str__(self):
         return self.name
 
-
+# create a link between genre and top book
 class Genre(models.Model):
     topbook = models.ForeignKey(TopBooks, on_delete=models.CASCADE)
     genre = models.ForeignKey(Genrelist, on_delete=models.CASCADE)

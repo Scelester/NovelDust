@@ -4,5 +4,4 @@ app_name = 'users'
 
 
 urlpatterns = [
-    path('', include('django.contrib.auth.urls')),
-]
+    path('', include('django.contrib.auth.urls')),]

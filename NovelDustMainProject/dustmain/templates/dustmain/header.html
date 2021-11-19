@@ -1,3 +1,4 @@
+{% load static %}
 <div id="header_top" class="d-flex" >
     <span id="header_top_NinedusT">
         <a href="{% url 'dustmain:index' %}">NovelDust</a>
@@ -5,6 +6,11 @@
     
     <div class="d-flex align-items-center justify-content-center" id="searchcontainmain">
         <input class="border-0" aria-label="Search" type="search" placeholder="Search" name="search" id="seach-inp">
+        <div class="searchbutholder">
+            <button id="Hbutx">
+                <img id="Hbutimgx" src="{% static 'dustmain/img/searchbarlogo.png' %}" alt="">
+            </button>
+        </div>
     </div>
 
     <span class="d-flex p-2">
@@ -15,5 +21,3 @@
     </span>
 
 </div>
-
-<div class="sticky-top" id="top-sticky-bar"></div>

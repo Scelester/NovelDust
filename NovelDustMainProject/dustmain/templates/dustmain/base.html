@@ -5,7 +5,7 @@
 	<head>
 
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
 
         <title> {% block title %}_NovelBase_{% endblock title %}</title>
 
@@ -21,9 +21,10 @@
 	<body>
 		{% include "dustmain/header.html" %}
 
-		<div>
-			{% block contentx %}{% endblock contentx %}
-		</div>
+		{% include "dustmain/navbar.html" %}
+		
+		
+		{% block contentx %}{% endblock contentx %}
 
 		{% include 'dustmain/footer.html' %}
 	

@@ -1,0 +1,48 @@
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'dustmain/css/navbar.css' %}" />
+
+<div class="hoverable" id="navcontainer">
+  <nav id="snav" onclick="showsidebar()">
+    <div class="toplinenav"></div>
+    <div id="navfiller"><p>☰</p></div>
+
+    <div class="navback">
+      <a target="_blank" href="https://youtube.com"
+        ><p class="navlowertext">&isin;</p>
+        YOUTUBE</a
+      >
+    </div>
+    <div class="navback">
+      <a target="_blank" href="https://facebook.com"
+        ><p class="navlowertext">&CircleMinus;</p>
+        FACEBOOK</a
+      >
+    </div>
+    <div class="navback">
+      <a target="_blank" href="https://github.com/"
+        ><p class="navlowertext">&imof;</p>
+        GITHUB</a
+      >
+    </div>
+
+    <div class="navback last navlowertext"id="hidenavbutton" onclick="hidesidebar()">&times</div>
+  </nav>
+</div>
+
+<script>
+  var navbar = document.getElementById("navcontainer");
+  var hiderbutton = document.getElementById("hidenavbutton")
+  function showsidebar() {
+    navbar.classList.add("active_snav");
+    hiderbutton.style.display = 'initial'
+    // navbar.classList.remove('inactive_snav');
+  }
+  function hidesidebar() {
+    event.stopPropagation();
+    navbar.classList.remove("active_snav");
+    hiderbutton.style.display = 'none';
+    
+    // navbar.classList.add('inactive_snav');
+  }
+</script>
