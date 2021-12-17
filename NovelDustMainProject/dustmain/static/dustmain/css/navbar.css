@@ -39,6 +39,8 @@ background-color: rgb(3, 3, 5);
 
 .active_snav .navback{
     display: initial;
+    opacity: 1;
+    transition: 0.2s;
 }
 #navcontcont{
     width: 100%;
@@ -49,6 +51,7 @@ background-color: rgb(3, 3, 5);
 
 .navback{
     display:none ;
+    opacity: 0;
 }
 
 

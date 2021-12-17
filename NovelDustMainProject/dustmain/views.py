@@ -1,15 +1,12 @@
 from django.shortcuts import render,HttpResponseRedirect,redirect
-from .forms import BookItemsForm,Topbookform
+from .models import TopBooks,BookItems,Genre,Genrelist
 
 # Create your views here.
 def index(request):
-    
-    if request.method != 'POST':
-        topform = Topbookform()
-    else:
-        topform = Topbookform(data=request.POST)
-        if topform.is_valid():
-            topform.save()
-    
-    return render(request,'dustmain/index.html',)
-    
+    topbooks = TopBooks.objects.order_by('-date_added')
+    contains = {'topbooks':topbooks}
+    return render(request,'dustmain/index.html',context=contains)
+
+def topbookpage(request,tbnameurl):
+    tbname = tbnameurl.replace('-',' ')
+    return render(request, 'dustmain/topbookpage.html')
