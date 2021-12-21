@@ -1,4 +1,32 @@
-#headertop{
-    height: 100px;
-    background-color: red;
+@media screen and (max-width:700px){
+    #header_top{
+        height: 100px;
+        flex-wrap: wrap;
+    }
+    #searchcontainmain{
+        order: 10;
+        position: relative;
+        margin: 0;padding: 0;
+        justify-content: center;
+    }
+    #loginlink{
+        display: none;
+    }
+    #seach-inp{
+        width:100%;
+    }
+    #navcontainer{
+        display: none;
+    }
+    .indexcontainer{
+        width: 100%;
+    }
+    .novelholderdiv{
+        width: 42%;
+        margin: 10px;
+        font-size: 10px;
+    }
+    .coverimage{
+        width: 100%;            
+    }
 }

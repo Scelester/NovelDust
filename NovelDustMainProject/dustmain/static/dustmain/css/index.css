@@ -17,6 +17,8 @@
     display: flex;
     align-items: flex-start;
     flex-wrap: wrap;
+    row-gap: 10px;
+    column-gap: 20px;
   }
   .novelholderdiv{
     display: flex;
@@ -25,7 +27,6 @@
     border: 2px solid red;
     align-items: center;
     background-color: rgb(17, 11, 11);
-    margin: 20px;
     max-width: 400px;
   }
   .novelholderdiv:hover{
