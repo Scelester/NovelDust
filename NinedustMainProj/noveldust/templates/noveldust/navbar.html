@@ -1,0 +1,28 @@
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'noveldust/css/navbar.css' %}" />
+
+<div class="hoverable" id="navcontainer" onmouseover="funcscroll()">
+  <nav id="snav" onclick="showsidebar()">
+    <div class="toplinenav"></div>
+    <div id="navfiller"><p>☰</p></div>
+
+    <div id="navcontcont">
+      <div class="navback">
+        <a target="_blank" href="https://youtube.com">
+        <p class="navlowertext">&isin;</p>YOUTUBE</a>
+      </div>
+      <div class="navback">
+        <a target="_blank" href="https://facebook.com">
+        <p class="navlowertext">&CircleMinus;</p>FACEBOOK</a>
+      </div>
+      <div class="navback">
+        <a target="_blank" href="https://github.com/">
+          <p class="navlowertext">&imof;
+          </p>GITHUB</a>
+      </div>
+    </div>
+
+    <div class="navback last navlowertext"id="hidenavbutton" onclick="hidesidebar()">&times</div>
+  </nav>
+</div>

@@ -1,0 +1,22 @@
+{% extends 'noveldust/base.html' %} 
+
+{% block title %}Login:NovelDust{% endblock title %} 
+
+
+{% block contentx %}
+
+<div class="d-flex flex-column topContainer1">
+  
+  <div class="loginpage_container02C">
+    <div class="mainloginhead"><h1>Login</h1></div>
+    
+    <form method="POST" class="formcx">
+      {% csrf_token %}
+      {{loginform.as_table}}
+      <div><button class="btn btn-outline-success" name="submit">Login</button></div>
+    </form>
+
+  </div>
+</div>
+
+{% endblock contentx %}

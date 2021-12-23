@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ninedust</title>
+    <link rel = "icon" href = "{% static 'home/img/icon.jpg' %}" type = "image/x-icon">
+    
+    {% comment %} loading bootstrap {% endcomment %}
+    <link rel="stylesheet" href="{%static 'noveldust/bootstrap_4/css/bootstrap.min.css'%}">
+    <script src="{%static 'noveldust/bootstrap_4/js/bootstrap.bundle.min.js'%}"></script>
+
+</head>
+<body>
+    <div style="height: 100vh;padding: 100px;" class="bg-dark d-flex align-items-center justify-content-center flex-wrap">
+        
+        <a href="{% url 'noveldust:index' %}" 
+            style="height: 200px;width: 20vw;font-size: 40px;
+                    box-shadow: 10px 10px rgb(0, 0, 0,0.5);background-color: rgb(68, 21, 21);
+                    color: black;text-decoration:none"
+            class="rounded d-flex align-items-center m-5 justify-content-center bg-warning">NovelDust
+        </a>
+
+
+        <a style="height: 150px;width: 15vw;font-size: 30px;box-shadow: 10px 10px rgb(0, 0, 0,0.5);
+                    background-color: rgb(77, 102, 94);"
+            class="spinner-border rounded bg-danger d-flex align-items-center m-5 justify-content-center">what's New
+        </a>
+
+
+        <a style="height: 100px;width: 8vw;font-size: 18px;box-shadow: 10px 10px rgb(0, 0, 0,0.5)"
+            class="spinner-border rounded bg-secondary d-flex align-items-center m-5 justify-content-center">About
+        </a>
+        
+        
+    </div>
+
+</body>
+</html>

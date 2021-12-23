@@ -1,0 +1,50 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+	<head>
+
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+        <title> {% block title %}_NovelBase_{% endblock title %}</title>
+
+		<link rel = "icon" href = "{% static 'noveldust/img/icon.png' %}" type = "image/x-icon">		
+
+		{% comment %} bootstraps {% endcomment %}
+		<link rel="stylesheet" href="{%static 'noveldust/bootstrap_4/css/bootstrap.min.css'%}">
+		<script src="{%static 'noveldust/bootstrap_4/js/bootstrap.bundle.min.js'%}"></script>
+		
+		{% comment %} actual css links {% endcomment %}
+		<link rel="stylesheet" href="{%static 'noveldust/css/base.css'%}">
+
+		<link rel="stylesheet" href="{%static 'noveldust/css/index.css'%}">
+
+		<link rel="stylesheet" href="{%static 'noveldust/css/mediaqueries.css'%}">
+
+		<link rel="stylesheet" href="{%static 'noveldust/css/topbookpage.css'%}">
+
+	</head>
+
+	<body>
+		{% include "noveldust/header.html" %}
+
+		{% include "noveldust/navbar.html" %}
+		
+		<div id="ctxmain">
+			{% block contentx %}{% endblock contentx %}
+		</div>
+
+		{% include 'noveldust/footer.html' %}
+
+		<script src=" {% static 'noveldust/js/base.js' %}"></script>
+		
+		{% block script %}
+			{% comment %}  
+					script so that script on other file can 
+					be stored here aka bottom of body
+			{% endcomment %}
+		{% endblock script %}
+
+	</body>
+</html>
