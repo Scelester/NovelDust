@@ -1,0 +1,23 @@
+{% extends 'noveldust/base.html' %}
+{% load static %}
+
+{% block title %}Noveldust{% endblock title %}Noveldust
+
+{% block contentx %}
+
+
+    <div class="d-flex w-100 justify-content-center">
+        <div id="novelcontainer" class="d-flex">
+            {% for tb in topbooks %}
+                <a class="card light_mode_obj novelholder nodecor_lightmode" href="https://www.google.com">
+                    <img class="card-img-top img-nov" src="{{tb.topcover.url}}" alt="" srcset="">
+                    <div class="card-body novelcardbody">
+                    <p class="card-title">{{tb.topname}}</p>
+                    <p class="card-subtitle text-muted small nov-genre">{{ tb.genre.all|join:", " }}</p>
+                    </div>
+                </a>
+            {% endfor %}
+        </div>
+    </div>
+    
+{% endblock contentx %}

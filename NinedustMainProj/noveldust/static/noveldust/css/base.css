@@ -1,0 +1,86 @@
+html {
+  min-height: 100%;
+  scrollbar-face-color: #201e1e;
+  scrollbar-base-color: #201e1e;
+  scrollbar-3dlight-color: #201e1e;
+  scrollbar-highlight-color: #201e1e;
+  scrollbar-track-color: white;
+  scrollbar-arrow-color: white;
+  scrollbar-shadow-color: #201e1e;
+}
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track-piece {
+  background-color: rgb(0, 0, 0);
+  border: 1px solid rgb(71, 135, 255);
+}
+::-webkit-scrollbar-thumb {
+  min-height: 20px;
+  background-color: #bcb7d3;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-corner {
+  background-color: #f31313;
+}
+::-webkit-resizer {
+  background-color: rgb(148, 44, 44);
+}
+
+.dark_mode_main_container{
+  background-color: rgb(44, 43, 43);
+  color: white !important;
+}
+
+.light_mode_main_container{
+  background-color: rgb(222, 235, 234);
+  color: black;
+  height: auto;
+}
+.light_mode_obj{
+  background-color: whitesmoke;
+}
+.fullscreenvw{
+  width: 100%;
+  min-height: 150vh; 
+}
+.nodecor_lightmode{
+  text-decoration: none !important;
+  color:black !important;
+}
+.nodecor_darkmode{
+  text-decoration: none !important;
+  color: white !important;
+}
+.fsz30-r{
+  font-size: max(22px,3vw);
+  font-family: 'Lucida Sans';
+}
+
+
+/* header */
+#searchbarcontainer{
+  background-color: rebeccapurple;
+  width: 45vw;
+  margin-left: auto;
+}
+#imgheadericon{
+  width: 7vw;
+  min-width: 50px;
+}
+#navbarmain{
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+}
+#authcontainer{
+  margin-left: auto;
+  column-gap: max(2vw,10px);
+  padding: 0 2px 0 8px;
+  user-select: none !important;
+}
+#authcontainer *{
+  font-size: max(1.6vw,14px);
+  opacity: 0.8;
+}
