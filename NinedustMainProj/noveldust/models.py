@@ -39,8 +39,6 @@ class BookItems(models.Model):
     topbook = models.ForeignKey(TopBooks, on_delete=models.CASCADE)
     name = models.CharField(max_length=1000,null=True)
     volume_no = models.IntegerField()
-    name = models.CharField(max_length=200)
-    volume_no = models.IntegerField()
     
     def file_name_path(self, filename):
         return f'media/bookfiles/{self.topbook.topname}/{filename}'
