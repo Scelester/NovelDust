@@ -1,0 +1,35 @@
+{% extends 'noveldust/base.html' %}
+{% load static %}
+
+{% block title %}Noveldust{% endblock title %}Noveldust
+
+{% block contentx %}
+    
+    {% include 'noveldust/next_prev.html' %}
+    
+    <div class="d-flex w-100 justify-content-center">
+        <div id="novelcontainer" class="d-flex">
+            {% for tb in topbooks %}
+                <a class="card light_mode_obj novelholder nodecor_lightmode" href="{% url 'noveldust:topbookpage' tbnameurl=tb.title_to_url %}">
+<<<<<<< HEAD
+                    {% if tb.topcover %}
+                        <img src="{{tb.topcover}}"  id="tpimg" >
+                    {% else %}
+                        <img src="{%static 'noveldust/img/booknotfound.png'%} " id="tpimg">
+                    {% endif %}
+=======
+                    <img class="card-img-top img-nov" src="{{tb.topcover.url}}" alt="" srcset="">
+>>>>>>> 351940d65842c32df25927a947dedae6041e9ecc
+                    <div class="card-body novelcardbody">
+                    <p class="card-title">{{tb.topname}}</p>
+                    <p class="card-subtitle text-muted small nov-genre">{{ tb.genre.all|join:", " }}</p>
+                    </div>
+                </a>
+            {% endfor %}
+        </div>
+    </div>
+
+    {% include 'noveldust/next_prev.html' %}
+
+    
+{% endblock contentx %}

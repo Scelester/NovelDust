@@ -1,0 +1,134 @@
+{% extends 'noveldust/base.html' %}
+{% load static %}
+
+{% block title %}{{tb.topname}}{% endblock title %}
+
+{% block contentx %}
+    <style>
+        #tpimgcont{
+            max-width: max(290px,25vw);
+            min-width: 270px;
+        }
+        #tpimg{
+            width: 100%;
+            border: 3px ridge wheat;
+        }
+        #topimgcap{
+            font-size: max(30px,4vw);
+            font-family:'Yanone Kaffeesatz';
+            letter-spacing:0.25vw;
+            color:#121212;
+            cursor:default;
+            caret-color:transparent;
+            animation: text-go-burr 1s ease infinite alternate-reverse forwards;
+            }
+        #topimgcap:hover{
+            animation: none;
+            text-shadow: 
+            0.5px 0.5px 0px white,
+            1px 1px 0px #121212,
+            1.5px 1.5px 0px white,
+            4px 4px 2px hsla(360,100%,0%,0.7),
+            4px 4px 4px hsla(360,100%,0%,0.5);
+    
+            font-variation-settings:"wght" 400;
+        }
+
+        #tpdescription{
+            font-style: italic;
+            padding:0 max(2vw,20px);
+            font-size:20px;
+        }
+        .bookrow{
+            min-height: 50px;
+            width: 100%;
+            background-color: red;
+            padding: 0 0 0 10px;
+            display: flex;
+            flex-direction: row;
+            font-size: min(24px,4.2vw);
+            align-items: center;
+        }
+        .color1{
+            background-color:#C0C0C0;
+        }
+        .color2{
+            background-color:#A9A9A9;
+        }
+        #contno1011{
+            font-size: 15px;background-color: grey;width: 100%;min-height: 75px;padding: 0 10px 20px;
+        }
+        #bookcount_p{
+            font-size: 15px;color:white;margin-left: auto;padding-right:max(5px,1vw);font-weight: 500;
+        }
+        #bookfiles_a{
+            text-decoration: none !important;color: black;
+        }
+        #volname_p{
+            width:50%;padding-top:10px;
+        }
+        #downloadtext_p{
+            margin-left: auto;padding-right: 10px;font-size: 15px;font-variant: small-caps;text-decoration: underline;
+        }
+        #rg-10_div{
+            row-gap:10px
+        }
+        #emptybook_p{
+            font-size:max(30px,3.2vw);cursor: default;
+        }
+
+    </style>
+    <div class="d-flex align-items-center pt-4 flex-column ">
+        <button id='goback121' class="btn btn-dark align-self-start ml-2" onclick="history.back()">&larr;</button>
+        <p id="topimgcap" >{{tb.topname}}</p>
+        {% if tb.author %}
+        <p>by {{tb.author}}</p>
+        {% endif %}
+        <figure id="tpimgcont">
+            {% if tb.topcover %}
+                <img src="{{tb.topcover}}" alt="" id="tpimg">
+            {% else %}
+                <img src="{%static 'noveldust/img/booknotfound.png'%} " alt="" id="tpimg">
+            {% endif %}
+
+        </figure>
+
+        <div class="w-100 d-flex flex-column align-items-center">
+            <p><small>updated : {{updated}}</small></p>
+            <p id="tpdescription">{{tb.description}}</p>
+            <div id="contno1011" class="d-flex flex-column">
+                <p id='bookcount_p'>
+                    {%if bkitem.count %}{{bkitem.count}}{%else%}0{%endif%} item{%if bkitem.count >= 2%}s{%endif%}   
+                </p>
+
+                {%if bkitem %}
+                    {%for books in bkitem %}
+                        <a class="{% cycle 'bookrow color1' 'bookrow color2' %}" href="{{books.bookfile}}" id='bookfiles_a'>
+                            <p id='volname_p'>{{books.name}} [volume-{{books.volume_no}}]<p>
+                            <p id='downloadtext_p'><small>download</small></p>
+                        </a>
+                    {%endfor%}
+                    <div class="d-flex w-100 justify-content-center">
+                    <button class="btn btn-primary mt-4">Download All</button>
+                    </div>
+                {%else%}
+
+                <div class="w-100 p-4 d-flex flex-column align-items-center" id='rg-10_div'>
+                    <p id="emptybook_p">Nothing to see here </p>
+                    <button class="btn btn-success"> Request this book</button>
+                </div>
+                    
+                {%endif%}
+
+            </div>
+
+
+
+        </div>
+
+    </div>
+
+
+
+
+{% endblock contentx %} %}

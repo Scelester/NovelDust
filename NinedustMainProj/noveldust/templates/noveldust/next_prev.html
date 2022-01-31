@@ -1,0 +1,17 @@
+{% load static %}
+
+
+<div class="d-flex w-100 justify-content-center">
+        {%if topbooks.has_previous%}
+          <a class="btn btn-secondary grow_half tothe_left " href="?page={{ topbooks.previous_page_number }}">&laquo; Prev</a>
+        {%else%}
+          <a class="btn btn-secondary grow_half tothe_left disabled" >&laquo; Prev</a>
+        {%endif%}
+
+        {%if topbooks.has_next%}
+          <a class="btn btn-secondary grow_half tothe_right" href="?page={{ topbooks.next_page_number }}" >Next &raquo;</a>
+        {%else%}
+          <a class="btn btn-secondary grow_half tothe_right disabled">Next &raquo;</a>
+        {%endif%}
+        
+</div>

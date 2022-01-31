@@ -1,0 +1,30 @@
+#novelcontainer{
+    width: 85%;
+    column-gap: 30px;
+    row-gap: 20px;
+    flex-wrap: wrap;
+    padding:0 0 20px 0;
+    overflow: hidden;
+    justify-content: center;
+}
+
+.novelholder{
+    width: max(180px,18vw);
+<<<<<<< HEAD
+font-size: max(1.3vw,0.8em);
+=======
+    font-size: max(1.3vw,0.8em);
+>>>>>>> 351940d65842c32df25927a947dedae6041e9ecc
+    cursor: pointer;
+}
+.lifted{
+    left: 1px;
+    top: -2px;
+    box-shadow: 5px 5px 5px rgb(67, 145, 74);
+    transition-delay: 2s ;
+}
+.nov-genre{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+

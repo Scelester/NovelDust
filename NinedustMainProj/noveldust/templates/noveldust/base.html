@@ -1,0 +1,58 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+        <title> {% block title %}_NovelBase_{% endblock title %}</title>
+
+		<link rel = "icon" href = "{% static 'noveldust/img/noveldusticon.png' %}" type = "image/x-icon">		
+
+		{% comment %} bootstraps jquery and popper {% endcomment %}
+		<link rel="stylesheet" href="{%static 'noveldust/bootstraps/bootstrap.css'%}">
+		<script src="{% static 'noveldust/bootstraps/jquery.js' %}"></script>
+		<script src="{% static 'noveldust/bootstraps/popper.js' %}"></script>
+		<script src="{% static 'noveldust/bootstraps/bootstrap.js' %}"></script>
+
+
+		{% comment %} actual css links {% endcomment %}
+		<link rel="stylesheet" href="{%static 'noveldust/css/base.css'%}">
+		<link rel="stylesheet" href="{%static 'noveldust/css/animation.css'%}">
+		<link rel="stylesheet" href="{%static 'noveldust/css/index.css'%}">
+		<link rel="stylesheet" href="{%static 'noveldust/css/mediaqueries.css'%}">
+
+	</head>
+
+	<body> 
+		<div class="light_mode_main_container fullscreenvw d-fixed" id="page-main-div">
+		
+			{% include 'noveldust/header.html' %}
+
+			{% block contentx %}{% endblock contentx %}
+		
+		</div>
+		
+		{% include 'noveldust/extra.html' %}
+
+		<script src=" {% static 'noveldust/js/base.js' %}"></script>
+		
+			{% block script %}
+			{% comment %}  
+					script so that script on other file can 
+					be stored here aka bottom of body
+			{% endcomment %}
+			{% endblock script %}
+
+		<script type="text/javascript">
+    
+    		$("img").on("error", function () {
+        		$(this).attr("src", " {%static 'noveldust/img/booknotfound.png'%} ");
+    		});
+
+		</script>
+
+	</body>
+</html>

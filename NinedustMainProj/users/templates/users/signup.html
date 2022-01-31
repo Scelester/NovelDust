@@ -1,0 +1,66 @@
+{% extends 'noveldust/base.html' %} 
+{% block title %}SignUp:NovelDust{% endblock title %} 
+
+{% block contentx %}
+<style>
+    #mainbarform{
+        font-size: min(20px,4vw);
+        padding-bottom: 15px;
+    }
+    #buildinform input{
+        width: max(25vw,200px);
+        height:26px;
+    }
+    #buildinform{
+        width: max(50vw,300px);
+        margin-bottom: 20px;
+        text-decoration: none;
+        align-items: center;
+    }
+    #buildinform p{
+        padding: 0;
+        margin:0 5px;
+    }
+    #buildinform span{
+        display: block;
+        color: green;
+        font-size: min(15px,2.8vw);
+    }
+    #buildinform ul{
+        color: blueviolet;
+        font-size: min(17px,3vw);
+    }
+    #loghead{
+        font-size: max(3vw,25px);
+        color: slategray;
+        padding:0 0 15px  0;
+    }
+    input{
+        border: none;
+        outline: none;
+    }
+    #buildinform input:focus{
+        box-shadow: 0 0 5px 2px aqua;
+        border-radius: 5px;
+        outline: 1px solid black;
+    }
+    .errorlist{
+        color: red;
+        text-decoration: underline;
+        list-style-type: none;
+    }
+</style>
+
+    <form method="post" id="mainbarform" class="light_mode_main_container d-flex flex-column align-items-center">
+        <div class="d-flex flex-column align-items-center" style="box-shadow: 0 0 10px 1px black;padding: 20px 0;margin-top:20px ;border-radius: 20px;">
+
+        <span id="loghead">Sign up to Noveldust</span>
+        <div id="buildinform" class="d-flex flex-column flex-wrap form-group">{{signupform.as_p}}</div>
+        <input type="submit" value="SignUp"  class="btn btn-primary p-2" style="font-size:min(25px,5vw);margin-bottom: 20px;" />
+            
+        </div>
+    </form>
+
+
+
+{% endblock contentx %}

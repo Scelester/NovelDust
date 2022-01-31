@@ -1,0 +1,35 @@
+{% load static %}
+
+<nav class="nav-link d-flex h-25 bg-light" id="navbarmain" >
+        
+    <a href="{% url 'noveldust:index' %}" class="nodecor_lightmode " tabindex="-1">
+    <figure class="tada-anime">
+        <img src="{% static 'noveldust/img/noveldusticon.png' %}" 
+        alt="Noveldust" srcset="" id="imgheadericon">
+        <figcaption id="headtext" class="fsz30-r" >Noveldust</figcaption>
+    </figure>
+    </a>
+
+    <div class="input-group rounded" id="searchbarcontainer">
+        <input type="search" class="form-control rounded" placeholder="Search for books & novels" aria-label="Search"
+        aria-describedby="search-addon">
+    </div>
+
+    <div id="authcontainer" class="d-flex">
+    {% if user.username %}
+        <div class="dropdown " >
+      <button class="btn dropdown-toggle " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false" style="background-color: #808080;">
+        {{user.username|title}}
+      </button>
+      <div class="dropdown-menu" style="position: relative;left: -50%;background-color: white;color: black;;">
+        <a class="dropdown-item" data-toggle="modal" data-target="#logoutmodal"  style="cursor: pointer;">Logout</a>
+      </div>
+</div>
+    {% else %}
+        <a class="btn btn-success pulse-anime " href='{% url "users:login" %}'>Login</a>
+        <a class="btn btn-success pulse-anime " href='{% url "users:signup" %}'>signup</a>
+    {%endif%}
+
+    </div>
+    
+</nav>
