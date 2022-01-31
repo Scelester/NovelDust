@@ -24,9 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-7bjqpw)t4j@de^vd-6d6w8cey8*h2j($zd7!b@no=1)(znoy5r'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1','192.168.100.228','192.168.100.70','192.168.100.64','192.168.100.78']
+ALLOWED_HOSTS = ['127.0.0.1','noveldust.herokuapp.com']
 
 
 # Application definition
