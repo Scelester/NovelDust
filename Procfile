@@ -1,1 +1,1 @@
-web: gunicorn NinedustMainProj/Ninedust.wsgi --log-file -
+web: sh ./run.sh
