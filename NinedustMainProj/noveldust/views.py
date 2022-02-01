@@ -24,7 +24,6 @@ def index(request):
 
     # for search bar
     search_query = request.GET.get('search')
-    print('\n\n\n\n\n',search_query)
     if search_query:
         topbooks = TopBooks.objects.filter(topname__icontains=search_query)
 
@@ -51,3 +50,12 @@ def topbookpage(request,tbnameurl):
 
     content = {'tb':tb,'bkitem':bkitem,'updated':updated}
     return render(request, 'noveldust/topbookpage.html',content)
+
+
+
+
+def searchview(request):
+    search_query = request.GET.get('search')
+    topbooks = TopBooks.objects.filter(topname__icontains=search_query)
+    contains = {'topbooks':topbooks,'sqr':search_query}
+    return render(request,'noveldust/index.html',context=contains)

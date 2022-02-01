@@ -78,10 +78,12 @@ html {
 
 /* header */
 #searchbarcontainer{
-  background-color: rebeccapurple;
   width: 45vw;
   margin-left: auto;
   position: sticky;top: 10px;
+}
+#sbar{
+  width: 100%;
 }
 #imgheadericon{
   width: 7vw;
@@ -102,8 +104,6 @@ html {
   font-size: max(1.6vw,14px);
   opacity: 0.8;
 }
-
-
 
 /**/
 .grow_half{

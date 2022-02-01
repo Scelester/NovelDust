@@ -6,5 +6,6 @@ app_name = 'noveldust'
 
 urlpatterns = [
     path('',views.index,name='index'),
-    path('GG/<str:tbnameurl>/',views.topbookpage,name='topbookpage')
+    path('GG/<str:tbnameurl>/',views.topbookpage,name='topbookpage'),
+    path('novelsearch/',views.searchview,name='novelsearch'),
 ]

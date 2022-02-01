@@ -103,7 +103,7 @@
 
                 {%if bkitem %}
                     {%for books in bkitem %}
-                        <a class="{% cycle 'bookrow color1' 'bookrow color2' %}" href="{{books.bookfile}}" id='bookfiles_a'>
+                        <a class="{% cycle 'bookrow color1' 'bookrow color2' %}" href="{%if books.bookfile%}{{books.bookfile}}{%else%}#bookcount_p{%endif%}" id='bookfiles_a'>
                             <p id='volname_p'>{{books.name}} [volume-{{books.volume_no}}]<p>
                             <p id='downloadtext_p'><small>download</small></p>
                         </a>

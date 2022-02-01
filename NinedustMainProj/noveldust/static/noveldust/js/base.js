@@ -74,4 +74,3 @@ $('.dropdown-menu').click(function(e) {
         $($(e.target).data('target')).modal()
     }
 });
-
