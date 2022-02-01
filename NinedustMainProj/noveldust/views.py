@@ -9,9 +9,10 @@ import time
 # Create your views here.
 def index(request):
     topbooks = TopBooks.objects.order_by('-date_added')
-    page = request.GET.get('page',1)
-    print(request.GET.get('page',1))
     
+    #  for pagination
+
+    page = request.GET.get('page',1)
     paginator = Paginator(topbooks,20)
 
     try:
@@ -21,6 +22,15 @@ def index(request):
     except EmptyPage:
         topbooks = paginator.page(paginator.num_pages)
 
+    # for search bar
+    search_query = request.GET.get('search')
+    print('\n\n\n\n\n',search_query)
+    if search_query:
+        topbooks = TopBooks.objects.filter(topname__icontains=search_query)
+
+
+
+    # final data send
     contains = {'topbooks':topbooks}
     return render(request,'noveldust/index.html',context=contains)
 

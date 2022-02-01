@@ -1,6 +1,9 @@
 {% load static %}
 
 <nav class="nav-link d-flex h-25 bg-light" id="navbarmain" >
+
+
+
         
     <a href="{% url 'noveldust:index' %}" class="nodecor_lightmode " tabindex="-1">
     <figure class="tada-anime">
@@ -10,10 +13,14 @@
     </figure>
     </a>
 
-    <div class="input-group rounded" id="searchbarcontainer">
-        <input type="search" class="form-control rounded" placeholder="Search for books & novels" aria-label="Search"
-        aria-describedby="search-addon">
-    </div>
+
+
+    <form action='' method='GET' class="input-group rounded" id="searchbarcontainer">
+        <input type="search" class="form-control rounded" name='search' placeholder="Search for books & novels">
+    </form>
+
+
+
 
     <div id="authcontainer" class="d-flex">
     {% if user.username %}
