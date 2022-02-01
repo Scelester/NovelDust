@@ -17,14 +17,42 @@
 
     <div id="authcontainer" class="d-flex">
     {% if user.username %}
-        <div class="dropdown " >
-      <button class="btn dropdown-toggle " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false" style="background-color: #808080;">
-        {{user.username|title}}
+    <div class="dropdown " style="opacity: 1 !important;">
+      <button class="btn dropdown-toggle " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false">
+        Options
       </button>
-      <div class="dropdown-menu" style="position: relative;left: -50%;background-color: white;color: black;;">
-        <a class="dropdown-item" data-toggle="modal" data-target="#logoutmodal"  style="cursor: pointer;">Logout</a>
-      </div>
-</div>
+      
+      <div class="usermenu dropdown-menu dropdown-menu-right " >
+            <p class="fss15-r">signed in @{{user.username}}</p>
+            
+            <div class="usermenuitem stop-ppg" id="mn1">
+                <a class="btn">Account</a>
+                <div class="subusermenu ">
+                    <a class="curthumb">Bookmarks</a>
+                    <a class="curthumb">Edit Account</a>
+                    <a class="curthumb" data-toggle="modal" data-target="#logoutmodal">Logout</a>
+                </div>
+
+            </div>
+            
+            <div class="usermenuitem" id="mn2">
+                <a class="btn">Show</a>
+                <div class="subusermenu">
+                    <a class=" curthumb">Genre</a>
+                    <a class=" curthumb">Author</a>
+                    <a class=" curthumb">Likes</a>
+                </div>
+            </div>
+            
+            <div class="usermenuitem" id="mn3">
+                <a class="btn">More</a>
+                <div class="subusermenu">
+                    <a class="curthumb">Become Editor</a>
+                </div>
+            </div>
+    </div>
+        
+    </div>
     {% else %}
         <a class="btn btn-success pulse-anime " href='{% url "users:login" %}'>Login</a>
         <a class="btn btn-success pulse-anime " href='{% url "users:signup" %}'>signup</a>

@@ -57,6 +57,23 @@ html {
   font-size: max(22px,3vw);
   font-family: 'Lucida Sans';
 }
+.curthumb{
+  cursor: pointer;
+}
+#dropdownMenuButton{
+  background-color: rgba(0,0,0,0) ;
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+#dropdownMenuButton:hover{
+  background-color: gray;
+}
+.fss15-r{
+  font-size:13px !important;
+  padding-left: 20px !important;
+}
+
 
 
 /* header */
@@ -105,3 +122,74 @@ html {
   margin-left: auto;
   margin-right: 10%;
 }
+
+
+
+
+
+/*usermenu*/
+    .usermenu{
+    width: min(300px,50vw);
+    height: auto;
+    background: rgba(200, 200, 210,1);
+    border-radius: 8px;
+    overflow: hidden;
+    opacity: 1;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+    color: black;
+    }
+    .usermenu *{
+        text-decoration: none !important;
+        color:black !important;
+        list-style: none !important ;
+        margin: 0;
+        padding: 0;
+        opacity: 1 !important;
+    }
+
+    .usermenu .btn{
+        display:block;
+        padding: 1rem;
+        border-bottom: solid 1px #1b1b2f;
+        border-top: solid 1px #1f4068;
+        position: relative;
+    }
+
+    .usermenu .subusermenu {
+        background: rgba(232, 251, 221, 1);
+        overflow: hidden;
+        max-height: 0;
+        transition: max-height .8s ease-out;
+        opacity: 1  ;
+    }
+
+    .usermenu .subusermenu a{
+        display:block;
+        padding: 1rem;
+        position: relative;
+    }
+
+    .usermenu .subusermenu a::before{
+        content:'';
+        display:block;
+        position: absolute;
+        top:0;
+        left:0;
+        height: 100%;
+        width: 5px;
+        background: #e43f5a;
+        opacity: 0;
+        transition: all .5s;
+    }
+
+    .usermenu .subusermenu a:hover{
+        padding-left: calc(1rem + 5px);
+    }
+
+    .usermenu .subusermenu a:hover::before{
+        opacity: 1;
+    }
+
+    .usermenuitemclick > .subusermenu{
+        max-height: 20rem;
+      }

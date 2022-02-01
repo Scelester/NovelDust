@@ -10,11 +10,8 @@
 
 .novelholder{
     width: max(180px,18vw);
-<<<<<<< HEAD
-font-size: max(1.3vw,0.8em);
-=======
     font-size: max(1.3vw,0.8em);
->>>>>>> 351940d65842c32df25927a947dedae6041e9ecc
+    font-size: max(1.3vw,0.8em);
     cursor: pointer;
 }
 .lifted{

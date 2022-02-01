@@ -48,10 +48,14 @@
         text-decoration: underline;
         list-style-type: none;
     }
+    .secondbari{
+        box-shadow: 0 0 10px 1px black;padding: 20px 10px;
+        margin-top:80px ;border-radius: 20px;
+    }
 </style>
 
     <form method="post" id="mainbarform" class="light_mode_main_container d-flex flex-column align-items-center">
-        <div class="d-flex flex-column align-items-center" style="box-shadow: 0 0 10px 1px black;padding: 20px 10px;margin-top:20px ;border-radius: 20px;">
+        <div class="d-flex flex-column align-items-center secondbari">
         <span id="loghead">Login in to Noveldust</span>
         {% csrf_token %}
         <div id="buildinform" class="d-flex flex-column flex-wrap">{{loginform.as_p}}</div>

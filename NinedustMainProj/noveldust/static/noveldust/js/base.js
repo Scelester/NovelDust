@@ -59,7 +59,19 @@ $.ajaxSetup({
         }
     }
 });
-<<<<<<< HEAD
 
-=======
->>>>>>> 351940d65842c32df25927a947dedae6041e9ecc
+
+// usermenu
+$('.usermenuitem').click(function(e){
+    $('.usermenuitem').removeClass('usermenuitemclick');
+    $(this).addClass('usermenuitemclick');
+})
+
+
+$('.dropdown-menu').click(function(e) {
+    e.stopPropagation();
+    if ($(e.target).is('[data-toggle=modal]')) {
+        $($(e.target).data('target')).modal()
+    }
+});
+
