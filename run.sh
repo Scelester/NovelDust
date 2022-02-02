@@ -1,4 +1,4 @@
 #!/bin/bash
 
 cd NinedustMainProj
-gunicorn Ninedust.wsgi
+gunicorn Ninedust.wsgi:application
