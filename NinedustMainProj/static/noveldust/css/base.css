@@ -91,7 +91,6 @@ html {
 /**/
 .grow_half{
   width: max(20%,100px);
-  margin-top: 20px;
   margin-bottom: 20px;
   font-size: min(4vw,22px);
 }

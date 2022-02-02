@@ -4,11 +4,13 @@
 {% block title %}Noveldust{% endblock title %}Noveldust
 
 {% block contentx %}
+    {% if topbooks.paginator.count >= 11 %}
+        {% include 'noveldust/next_prev.html' %}    
+    {% endif %}
     
-    {% include 'noveldust/next_prev.html' %}
     
-    <div class="d-flex w-100 justify-content-center">
-        <div id="novelcontainer" class="d-flex">
+    <div class="d-flex w-100 justify-content-center" >
+        <div id="novelcontainer" class="d-flex pt-4">
             {% for tb in topbooks %}
                 <a class="card light_mode_obj novelholder nodecor_lightmode" href="{% url 'noveldust:topbookpage' tbnameurl=tb.title_to_url %}">
                     {% if tb.topcover %}

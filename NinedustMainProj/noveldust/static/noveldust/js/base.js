@@ -1,6 +1,7 @@
 function isMobile() {
-    try{ document.createEvent("TouchEvent"); return true; }
-    catch(e){ return false; }
+    if(window.innerWidth<=450){
+        return true
+    }
   }
 
 
@@ -73,4 +74,14 @@ $('.dropdown-menu').click(function(e) {
     if ($(e.target).is('[data-toggle=modal]')) {
         $($(e.target).data('target')).modal()
     }
+});
+
+
+$(document).ready(function() {
+  
+    var input = $("#sbar");
+    var len = input.val().length;
+    input[0].focus();
+    input[0].setSelectionRange(len, len);
+
 });

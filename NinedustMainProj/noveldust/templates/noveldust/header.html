@@ -16,7 +16,7 @@
 
 
     <form action="{%url 'noveldust:novelsearch'%}" method='GET' class="input-group rounded" id="searchbarcontainer" >
-        <input id='sbar' type="search" class="form-control rounded" name='search' placeholder="Search for books & novels" value="{%if sqr %}{{sqr}}{%endif%}">
+        <input id='sbar' type="search" class="form-control rounded" {%if sqr %}autofocus{%endif%} name='search' placeholder="Search for books & novels" value="{%if sqr %}{{sqr}}{%endif%}">
     </form>
 
 

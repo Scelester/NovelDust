@@ -39,7 +39,7 @@ html {
   height: auto;
 }
 .light_mode_obj{
-  background-color: whitesmoke;
+  background-color: rgba(245, 245, 245,1);
 }
 .fullscreenvw{
   width: 100%;
@@ -57,9 +57,7 @@ html {
   font-size: max(22px,3vw);
   font-family: 'Lucida Sans';
 }
-.curthumb{
-  cursor: pointer;
-}
+
 #dropdownMenuButton{
   background-color: rgba(0,0,0,0) ;
   border: none;
@@ -102,14 +100,14 @@ html {
 }
 #authcontainer *{
   font-size: max(1.6vw,14px);
-  opacity: 0.8;
+  opacity: 1;
 }
 
 /**/
 .grow_half{
   width: max(20%,100px);
   margin-top: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   font-size: min(4vw,22px);
 }
 
@@ -134,7 +132,6 @@ html {
     background: rgba(200, 200, 210,1);
     border-radius: 8px;
     overflow: hidden;
-    opacity: 1;
     box-shadow: 0 0 10px rgba(0, 0, 0, .5);
     color: black;
     }
@@ -154,13 +151,14 @@ html {
         border-top: solid 1px #1f4068;
         position: relative;
     }
-
+  .curthumb{
+    cursor: pointer;
+  }
     .usermenu .subusermenu {
-        background: rgba(232, 251, 221, 1);
+        background: rgba(225, 221, 255, 1.0);
         overflow: hidden;
         max-height: 0;
-        transition: max-height .8s ease-out;
-        opacity: 1  ;
+        transition: max-height .5s ease-out;
     }
 
     .usermenu .subusermenu a{
