@@ -18,7 +18,17 @@
 
 </head>
 <body>
+
+
     <div style="min-height: 100vh;padding: 100px;" class="bg-dark d-flex align-items-center justify-content-center flex-wrap">
+
+    {% if not user.username %}
+        <div style="flex:0 0 100%;position: fixed ;top: 20px;right: 10px;">
+            <a class="btn btn-secondary pulse-anime " href='{% url "users:login" %}'>Login</a>
+            <a class="btn btn-secondary pulse-anime " href='{% url "users:signup" %}'>signup</a>
+        </div>
+    {%endif%}
+
         
         <a href="{% url 'noveldust:index' %}" 
             style="height: 200px;width: 25vw;min-width:200px;font-size: max(4vw,26px);
