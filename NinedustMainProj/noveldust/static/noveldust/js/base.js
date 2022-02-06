@@ -79,7 +79,7 @@ $('.dropdown-menu').click(function(e) {
 
 $(document).ready(function() {
   
-    var input = $("#sbar");
+    var input = $(".sbarf");
     var len = input.val().length;
     input[0].focus();
     input[0].setSelectionRange(len, len);

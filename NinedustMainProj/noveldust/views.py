@@ -22,15 +22,18 @@ def index(request):
     except EmptyPage:
         topbooks = paginator.page(paginator.num_pages)
 
+
+    contains = {'topbooks':topbooks}
+
     # for search bar
     search_query = request.GET.get('search')
     if search_query:
-        topbooks = TopBooks.objects.filter(topname__icontains=search_query)
-
+        topbooks = TopBooks.objects.filter(topname__icontains=search_query)[:30]
+        contains = {'topbooks':topbooks,'sqr':search_query}
 
 
     # final data send
-    contains = {'topbooks':topbooks}
+    
     return render(request,'noveldust/index.html',context=contains)
 
 

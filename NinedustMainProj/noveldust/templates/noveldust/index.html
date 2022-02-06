@@ -3,7 +3,11 @@
 
 {% block title %}Noveldust{% endblock title %}Noveldust
 
+
 {% block contentx %}
+
+{%if topbooks.paginator.count  != '' %}
+
     {% if topbooks.paginator.count >= 11 %}
         {% include 'noveldust/next_prev.html' %}    
     {% endif %}
@@ -29,6 +33,9 @@
     </div>
 
     {% include 'noveldust/next_prev.html' %}
+{% else %}
+    <p>Nothing found</p>
+{%endif%}
 
     
 {% endblock contentx %}

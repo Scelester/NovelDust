@@ -13,10 +13,8 @@
     </figure>
     </a>
 
-
-
-    <form action="{%url 'noveldust:novelsearch'%}" method='GET' class="input-group rounded" id="searchbarcontainer" >
-        <input id='sbar' type="search" class="form-control rounded" {%if sqr %}autofocus{%endif%} name='search' placeholder="Search for books & novels" value="{%if sqr %}{{sqr}}{%endif%}">
+    <form action="{%url 'noveldust:index'%}" method='GET' class="input-group rounded" id="searchbarcontainer" >
+        <input id='sbar' type="search" class="form-control rounded {%if sqr %}sbarf{%endif%}" name='search' placeholder="Search for books & novels" value="{%if sqr %}{{sqr}}{%endif%}">
     </form>
 
 
@@ -57,12 +55,12 @@
                     <a class="curthumb">Become Editor</a>
                 </div>
             </div>
-    </div>
+</div>
         
     </div>
     {% else %}
-        <a class="btn btn-success pulse-anime " href='{% url "users:login" %}'>Login</a>
-        <a class="btn btn-success pulse-anime " href='{% url "users:signup" %}'>signup</a>
+        <a class="btn btn-secondary pulse-anime " href='{% url "users:login" %}'>Login</a>
+        <a class="btn btn-secondary pulse-anime " href='{% url "users:signup" %}'>signup</a>
     {%endif%}
 
     </div>
