@@ -43,7 +43,7 @@ html {
 }
 .fullscreenvw{
   width: 100%;
-  min-height: 100vh; 
+  min-height: 130vh; 
 }
 .nodecor_lightmode{
   text-decoration: none !important;
