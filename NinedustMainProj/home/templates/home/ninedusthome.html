@@ -24,6 +24,7 @@
 
     {% if not user.username %}
         <div style="flex:0 0 100%;position: fixed ;top: 20px;right: 10px;">
+            <span class="text-success pr-2"><small>you are not logged in</small></span>
             <a class="btn btn-secondary pulse-anime " href='{% url "users:login" %}'>Login</a>
             <a class="btn btn-secondary pulse-anime " href='{% url "users:signup" %}'>signup</a>
         </div>

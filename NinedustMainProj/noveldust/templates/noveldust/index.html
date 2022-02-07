@@ -13,7 +13,7 @@
     
     
     <div class="d-flex w-100 justify-content-center" >
-        <div id="novelcontainer" class="d-flex pt-4">
+    <div id="novelcontainer" class="d-flex pt-4">
             {% for tb in topbooks %}
                 <a class="card light_mode_obj novelholder nodecor_lightmode" href="{% url 'noveldust:topbookpage' tbnameurl=tb.title_to_url %}">
                     {% if tb.topcover %}
@@ -24,7 +24,7 @@
 
                     <div class="card-body novelcardbody">
                     <p class="card-title">{{tb.topname}}</p>
-                    <p class="card-subtitle text-muted small nov-genre">{{ tb.genre.all|join:", " }}</p>
+                    <p class="card-subtitle text-muted nov-genre">{{ tb.genre.all|join:", " }}</p>
                     </div>
                 </a>
             {% endfor %}
@@ -33,7 +33,7 @@
 
     {% include 'noveldust/next_prev.html' %}
 {% else %}
-    <div class="d-flex w-100 bg-secondary align-items-center justify-content-center" id='notfoundcontainer' >
+    <div class="d-flex w-100 align-items-center justify-content-center" id='notfoundcontainer' >
     <p class="text-info">Nothing found<p>
     </div>
 {%endif%}

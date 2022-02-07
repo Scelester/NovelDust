@@ -1,5 +1,5 @@
 #novelcontainer{
-    width: 85%;
+    width: 98%;
     column-gap: 30px;
     row-gap: 20px;
     flex-wrap: wrap;
@@ -9,11 +9,18 @@
 }
 
 .novelholder{
-    width: max(180px,18vw);
+    width: max(21%,180px);
     font-size: max(1.3vw,0.8em);
     font-size: max(1.3vw,0.8em);
     cursor: pointer;
+    max-width: 250px;
+    min-width: 120px;
 }
+.novelholder:hover{
+        left: 1px;
+        top: -2px;
+        box-shadow: 5px 5px 5px rgb(67, 145, 74);
+    }
 .lifted{
     left: 1px;
     top: -2px;

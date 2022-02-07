@@ -19,23 +19,20 @@
 
 @media only screen and (max-width: 450px) {
     .novelholder{
-        width: max(150px,45%);
+        width: max(150px,46.5%);
     }
     #goback121{
         background: none;
         color: black;
     }
+    #novelcontainer{
+        width: 100%;
+        column-gap: 6px;
+        padding: 0;
+        row-gap: 6px;
+    }
 }
 
 @media only screen and (max-width: 350px) {
-    .novelholder{
-        width: max(120px,45%);
-    }
-}
-@media only screen and (min-width: 800px) {
-    .novelholder:hover{
-        left: 1px;
-        top: -2px;
-        box-shadow: 5px 5px 5px rgb(67, 145, 74);
-    }
+/**/
 }

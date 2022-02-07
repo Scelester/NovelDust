@@ -17,7 +17,7 @@
             font-size: max(30px,4vw);
             font-family:'Yanone Kaffeesatz';
             letter-spacing:0.25vw;
-            color:#121212;
+            color:white;
             cursor:default;
             caret-color:transparent;
             animation: text-go-burr 1s ease infinite alternate-reverse forwards;
@@ -25,9 +25,9 @@
         #topimgcap:hover{
             animation: none;
             text-shadow: 
-            0.5px 0.5px 0px white,
+            0.5px 0.5px 0px black,
             1px 1px 0px #121212,
-            1.5px 1.5px 0px white,
+            1.5px 1.5px 0px black,
             4px 4px 2px hsla(360,100%,0%,0.7),
             4px 4px 4px hsla(360,100%,0%,0.5);
     
@@ -38,6 +38,8 @@
             font-style: italic;
             padding:0 max(2vw,20px);
             font-size:20px;
+            background-color: bisque;
+            color: black;
         }
         .bookrow{
             min-height: 50px;
@@ -78,7 +80,7 @@
         }
 
     </style>
-    <div class="d-flex align-items-center pt-4 flex-column ">
+    <div class="d-flex align-items-center pt-4 flex-column text-white">
         <button id='goback121' class="btn btn-dark align-self-start ml-2" onclick="history.back()">&larr;</button>
         <p id="topimgcap" >{{tb.topname}}</p>
         {% if tb.author %}

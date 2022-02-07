@@ -7,6 +7,10 @@
         font-size: min(20px,4vw);
         padding-bottom: 15px;
     }
+    .bbcontainmx{
+    box-shadow: 0 0 10px 1px black;padding: 20px 0;margin-top:20px ;border-radius: 20px;
+    background-color: seashell;
+    }
     #buildinform input{
         width: max(25vw,200px);
         height:31px;
@@ -17,15 +21,25 @@
         margin-bottom: 20px;
         text-decoration: none;
         align-items: center;
+        padding-top: 10px;
+        
     }
-    #buildinform p{
-        padding: 0;
-        margin:0 5px;
+    #buildinform > p{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
     }
+    /*#buildinform p */
     #buildinform span{
+        flex: 100%;
+        padding-left:2px ;
+        text-align: center;
         display: block;
         color: green;
         font-size: min(15px,2.8vw);
+    }
+    #buildinform label{
+        width: min(30vw,130px);
     }
     #buildinform ul{
         color: blueviolet;
@@ -52,11 +66,11 @@
     }
 </style>
 
-    <form method="post" id="mainbarform" class="light_mode_main_container d-flex flex-column align-items-center">
-        <div class="d-flex flex-column align-items-center" style="box-shadow: 0 0 10px 1px black;padding: 20px 0;margin-top:20px ;border-radius: 20px;">
+    <form method="post" id="mainbarform" class="d-flex flex-column align-items-center">
+        <div class="d-flex flex-column align-items-center bbcontainmx">
 
         <span id="loghead">Sign up to Noveldust</span>
-        <div id="buildinform" class="d-flex flex-column flex-wrap form-group">{{signupform.as_p}}</div>
+        <div id="buildinform" class="d-flex w-100 flex-column flex-wrap form-group">{{signupform.as_p}}</div>
         <input type="submit" value="SignUp"  class="btn btn-primary p-2" style="font-size:min(25px,5vw);margin-bottom: 20px;" />
             
         </div>

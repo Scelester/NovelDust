@@ -29,7 +29,7 @@ html {
 }
 
 .dark_mode_main_container{
-  background-color: rgb(44, 43, 43);
+  background-color:   #606060;
   color: white !important;
 }
 
@@ -56,6 +56,14 @@ html {
 .fsz30-r{
   font-size: max(22px,3vw);
   font-family: 'Lucida Sans';
+}
+
+
+#page-main-div{
+  background: url('https://wallpaperaccess.com/full/345330.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 #dropdownMenuButton{
@@ -91,6 +99,7 @@ html {
   justify-content: flex-start;
   align-items: center;
   flex-wrap: wrap;
+  background: transparent;
 }
 #authcontainer{
   margin-left: auto;

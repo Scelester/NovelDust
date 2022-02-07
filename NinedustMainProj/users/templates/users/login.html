@@ -15,15 +15,19 @@
     }
     #buildinform{
         width: max(50vw,300px);
-        margin-bottom: 20px;
         text-decoration: none;
         align-items: center;
     }
-    #buildinform p{
-        padding: 0;
-        margin:0 5px;
+    #buildinform > p{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
     }
+    /*#buildinform p */
     #buildinform span{
+        flex: 100%;
+        padding-left:2px ;
+        text-align: center;
         display: block;
         color: green;
         font-size: min(15px,2.8vw);
@@ -39,6 +43,7 @@
     input{
         border: none;
         outline: none;
+        margin-left: 4px;
     }
     #buildinform input:focus{
         box-shadow: 0 0 5px 2px aqua;
@@ -52,21 +57,28 @@
     .secondbari{
         box-shadow: 0 0 10px 1px black;padding: 20px 10px;
         margin-top:80px ;border-radius: 20px;
+        background-color: seashell;
+    }
+    .shpasbox{
+        font-size: 16px;color:green;padding-bottom: 10px;
+    }
+    .subminbutn{
+        font-size: max(20px,2vw);box-sizing: border-box;padding: 5px 20px;
     }
 </style>
 
-    <form method="post" id="mainbarform" class="light_mode_main_container d-flex flex-column align-items-center">
+    <form method="post" id="mainbarform" class="d-flex flex-column align-items-center">
         <div class="d-flex flex-column align-items-center secondbari">
         <span id="loghead">Login in to Noveldust</span>
         {% csrf_token %}
         <div id="buildinform" class="d-flex flex-column flex-wrap">{{loginform.as_p}}</div>
 
-        <span class="d-flex form-check" style="padding-bottom:20px">
+        <span class="d-flex form-check">
             <input type="checkbox" id="cbshowpass"  class="form-check-input" onclick="clickxx()" />
-            <label for="cbshowpass" style="font-size: 16px;color:green;" class="form-check-label">show password</label>
+            <label for="cbshowpass"  class="shpasbox form-check-label">show password</label>
         </span>
         
-        <input type="submit" value="Login" class="btn btn-primary" style="font-size: max(20px,2vw);box-sizing: border-box;padding: 5px 20px;" />
+        <input type="submit" value="Login" class="btn btn-primary subminbutn" />
     </div>
     </form> 
 {% endblock contentx %}
