@@ -27,17 +27,15 @@
 	</head>
 
 	<body> 
-		<div class="fullscreenvw" id="page-main-div">
-		
+		<div class="fullscreenvw d-fix" id="page-main-div">
 			{% include 'noveldust/header.html' %}
-
-			<hr class='bg-white m-0'>
+			{% include 'noveldust/extra.html' %}
 
 			{% block contentx %}{% endblock contentx %}
 		
 		</div>
 		
-		{% include 'noveldust/extra.html' %}
+		
 
 		<script src=" {% static 'noveldust/js/base.js' %}"></script>
 		
