@@ -1,4 +1,4 @@
-{% extends 'noveldust/base.html' %}
+    {% extends 'noveldust/base.html' %}
 {% load static %}
 
 {% block title %}{{tb.topname}}{% endblock title %}
@@ -91,9 +91,9 @@
         {% endif %}
         <figure id="tpimgcont">
             {% if tb.topcover %}
-                <img src="{{tb.topcover}}"  class=.topppimg">
+                <img src="{{tb.topcover.url}}"  class="topppimg">
             {% else %}
-                <img src="{%static 'noveldust/img/booknotfound.png'%} "  class=.topppimg">
+                <img src="{%static 'noveldust/img/booknotfound.png'%} "  class="topppimg">
             {% endif %}
 
         </figure>

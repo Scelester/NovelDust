@@ -17,9 +17,9 @@
             {% for tb in topbooks %}
                 <a class="card light_mode_obj novelholder nodecor_lightmode" href="{% url 'noveldust:topbookpage' tbnameurl=tb.title_to_url %}">
                     {% if tb.topcover %}
-                        <img class="card-img-top img-nov" src="{{tb.topcover.url}}"  id="tpimg" >
+                        <img class="card-img-top img-nov" src="{{tb.topcover.url}}" alt='non'>
                     {% else %}
-                        <img class="card-img-top img-nov" src="{%static 'noveldust/img/booknotfound.png'%} " id="tpimg">
+                        <img class="card-img-top img-nov" src="{%static 'noveldust/img/booknotfound.png'%} " alt='non'>
                     {% endif %}
 
                     <div class="card-body novelcardbody">
