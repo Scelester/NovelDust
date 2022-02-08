@@ -48,6 +48,7 @@ body{
 .fullscreenvw{
   width: 100%;
   min-height: 100vh; 
+  height: auto;
 }
 .nodecor_lightmode{
   text-decoration: none !important;

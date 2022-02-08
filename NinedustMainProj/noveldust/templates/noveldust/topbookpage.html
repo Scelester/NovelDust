@@ -9,7 +9,7 @@
             max-width: max(290px,25vw);
             min-width: 270px;
         }
-        #tpimg{
+        .topppimg{
             width: 100%;
             border: 3px ridge wheat;
         }
@@ -91,9 +91,9 @@
         {% endif %}
         <figure id="tpimgcont">
             {% if tb.topcover %}
-                <img src="{{tb.topcover}}"  id="tpimg">
+                <img src="{{tb.topcover}}"  class=.topppimg">
             {% else %}
-                <img src="{%static 'noveldust/img/booknotfound.png'%} "  id="tpimg">
+                <img src="{%static 'noveldust/img/booknotfound.png'%} "  class=.topppimg">
             {% endif %}
 
         </figure>
