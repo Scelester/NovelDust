@@ -61,11 +61,13 @@ body{
   font-size: max(22px,3vw);
   font-family: 'Lucida Sans';
 }
+#headtext{
+  color: white;
+}
 
 
 #page-main-div{
   background: url('../img/background.svg');
-
 }
 
 #dropdownMenuButton{
