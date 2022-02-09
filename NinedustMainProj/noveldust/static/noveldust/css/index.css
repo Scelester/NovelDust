@@ -19,7 +19,7 @@
 .novelholder:hover{
         left: 1px;
         top: -2px;
-        box-shadow: 5px 5px 5px rgb(67, 145, 74);
+        box-shadow: 3px 3px 3px rgb(67, 145, 74);
     }
 .lifted{
     left: 1px;
