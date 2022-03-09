@@ -1,5 +1,4 @@
 html {
-  min-height: 100%;
   scrollbar-face-color: #201e1e;
   scrollbar-base-color: #201e1e;
   scrollbar-3dlight-color: #201e1e;
@@ -7,6 +6,7 @@ html {
   scrollbar-track-color: white;
   scrollbar-arrow-color: white;
   scrollbar-shadow-color: #201e1e;
+  background-color: black;
 }
 ::-webkit-scrollbar {
   width: 8px;
@@ -29,7 +29,7 @@ html {
 }
 
 .dark_mode_main_container{
-  background-color: rgb(44, 43, 43);
+  background-color:   #606060;
   color: white !important;
 }
 
@@ -39,11 +39,12 @@ html {
   height: auto;
 }
 .light_mode_obj{
-  background-color: whitesmoke;
+  background-color: rgba(245, 245, 245,1);
 }
 .fullscreenvw{
   width: 100%;
   min-height: 100vh; 
+  
 }
 .nodecor_lightmode{
   text-decoration: none !important;
@@ -57,14 +58,39 @@ html {
   font-size: max(22px,3vw);
   font-family: 'Lucida Sans';
 }
+#headtext{
+  color: white;
+}
+
+
+#page-main-div{
+  background: url('../img/background.svg');
+}
+
+#dropdownMenuButton{
+  background-color: rgba(0,0,0,0) ;
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+#dropdownMenuButton:hover{
+  background-color: gray;
+}
+.fss15-r{
+  font-size:13px !important;
+  padding-left: 20px !important;
+}
+
 
 
 /* header */
 #searchbarcontainer{
-  background-color: rebeccapurple;
   width: 45vw;
   margin-left: auto;
   position: sticky;top: 10px;
+}
+#sbar{
+  width: 100%;
 }
 #imgheadericon{
   width: 7vw;
@@ -74,6 +100,7 @@ html {
   justify-content: flex-start;
   align-items: center;
   flex-wrap: wrap;
+  background: transparent;
 }
 #authcontainer{
   margin-left: auto;
@@ -83,16 +110,14 @@ html {
 }
 #authcontainer *{
   font-size: max(1.6vw,14px);
-  opacity: 0.8;
+  opacity: 1;
 }
-
-
 
 /**/
 .grow_half{
   width: max(20%,100px);
   margin-top: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   font-size: min(4vw,22px);
 }
 
@@ -105,3 +130,74 @@ html {
   margin-left: auto;
   margin-right: 10%;
 }
+
+
+
+
+
+/*usermenu*/
+    .usermenu{
+    width: min(300px,50vw);
+    height: auto;
+    background: rgba(200, 200, 210,1);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+    color: black;
+    }
+    .usermenu *{
+        text-decoration: none !important;
+        color:black !important;
+        list-style: none !important ;
+        margin: 0;
+        padding: 0;
+        opacity: 1 !important;
+    }
+
+    .usermenu .btn{
+        display:block;
+        padding: 1rem;
+        border-bottom: solid 1px #1b1b2f;
+        border-top: solid 1px #1f4068;
+        position: relative;
+    }
+  .curthumb{
+    cursor: pointer;
+  }
+    .usermenu .subusermenu {
+        background: rgba(225, 221, 255, 1.0);
+        overflow: hidden;
+        max-height: 0;
+        transition: max-height .5s ease-out;
+    }
+
+    .usermenu .subusermenu a{
+        display:block;
+        padding: 1rem;
+        position: relative;
+    }
+
+    .usermenu .subusermenu a::before{
+        content:'';
+        display:block;
+        position: absolute;
+        top:0;
+        left:0;
+        height: 100%;
+        width: 5px;
+        background: #e43f5a;
+        opacity: 0;
+        transition: all .5s;
+    }
+
+    .usermenu .subusermenu a:hover{
+        padding-left: calc(1rem + 5px);
+    }
+
+    .usermenu .subusermenu a:hover::before{
+        opacity: 1;
+    }
+
+    .usermenuitemclick > .subusermenu{
+        max-height: 20rem;
+      }

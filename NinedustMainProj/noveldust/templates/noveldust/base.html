@@ -27,15 +27,15 @@
 	</head>
 
 	<body> 
-		<div class="light_mode_main_container fullscreenvw d-fixed" id="page-main-div">
-		
+		<div class="fullscreenvw d-fixed" id="page-main-div">
 			{% include 'noveldust/header.html' %}
+			{% include 'noveldust/extra.html' %}
 
 			{% block contentx %}{% endblock contentx %}
 		
 		</div>
 		
-		{% include 'noveldust/extra.html' %}
+		
 
 		<script src=" {% static 'noveldust/js/base.js' %}"></script>
 		

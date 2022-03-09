@@ -1,6 +1,7 @@
 function isMobile() {
-    try{ document.createEvent("TouchEvent"); return true; }
-    catch(e){ return false; }
+    if(window.innerWidth<=450){
+        return true
+    }
   }
 
 
@@ -59,7 +60,28 @@ $.ajaxSetup({
         }
     }
 });
-<<<<<<< HEAD
 
-=======
->>>>>>> 351940d65842c32df25927a947dedae6041e9ecc
+
+// usermenu
+$('.usermenuitem').click(function(e){
+    $('.usermenuitem').removeClass('usermenuitemclick');
+    $(this).addClass('usermenuitemclick');
+})
+
+
+$('.dropdown-menu').click(function(e) {
+    e.stopPropagation();
+    if ($(e.target).is('[data-toggle=modal]')) {
+        $($(e.target).data('target')).modal()
+    }
+});
+
+
+$(document).ready(function() {
+    {
+    var input = $(".sbarf");
+    var len = input.val().length;
+    input[0].focus();
+    input[0].setSelectionRange(len, len);
+    }
+});

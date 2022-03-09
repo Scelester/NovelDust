@@ -106,9 +106,9 @@
 @keyframes text-go-burr {
   0%{
     text-shadow: 
-            0.5px 0.5px 0px white,
+            0.5px 0.5px 0px black,
             1px 1px 0px #121212,
-            1.5px 1.5px 0px white,
+            1.5px 1.5px 0px black,
             4px 4px 2px hsla(360,100%,0%,0.7),
             4px 4px 4px hsla(360,100%,0%,0.5);
     
@@ -124,9 +124,9 @@
 @-webkit-keyframes text-go-burr {
   0%{
     text-shadow: 
-            0.5px 0.5px 0px white,
+            0.5px 0.5px 0px black,
             1px 1px 0px #121212,
-            1.5px 1.5px 0px white,
+            1.5px 1.5px 0px black,
             4px 4px 2px hsla(360,100%,0%,0.7),
             4px 4px 4px hsla(360,100%,0%,0.5);
     

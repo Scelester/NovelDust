@@ -1,35 +1,68 @@
 {% load static %}
 
-<nav class="nav-link d-flex h-25 bg-light" id="navbarmain" >
+<nav class="nav-link d-flex h-25 " id="navbarmain" >
+
+
+
         
     <a href="{% url 'noveldust:index' %}" class="nodecor_lightmode " tabindex="-1">
     <figure class="tada-anime">
         <img src="{% static 'noveldust/img/noveldusticon.png' %}" 
-        alt="Noveldust" srcset="" id="imgheadericon">
+        alt="Noveldust" id="imgheadericon">
         <figcaption id="headtext" class="fsz30-r" >Noveldust</figcaption>
     </figure>
     </a>
 
-    <div class="input-group rounded" id="searchbarcontainer">
-        <input type="search" class="form-control rounded" placeholder="Search for books & novels" aria-label="Search"
-        aria-describedby="search-addon">
-    </div>
+    <form action="{%url 'noveldust:index'%}" method='GET' class="input-group rounded" id="searchbarcontainer" >
+        <input id='sbar' type="search" class="form-control rounded {%if sqr %}sbarf{%endif%}" name='search' placeholder="Search for books & novels" value="{%if sqr %}{{sqr}}{%endif%}">
+    </form>
 
-    <div id="authcontainer" class="d-flex">
+
+
+
+<div id="authcontainer" class="d-flex">
     {% if user.username %}
-        <div class="dropdown " >
-      <button class="btn dropdown-toggle " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false" style="background-color: #808080;">
-        {{user.username|title}}
-      </button>
-      <div class="dropdown-menu" style="position: relative;left: -50%;background-color: white;color: black;;">
-        <a class="dropdown-item" data-toggle="modal" data-target="#logoutmodal"  style="cursor: pointer;">Logout</a>
-      </div>
-</div>
+    <div class="dropdown " style="opacity: 1 !important;">
+          <button class="btn dropdown-toggle text-white" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false">
+            Options
+          </button>
+          
+          <div class="usermenu dropdown-menu dropdown-menu-right " >
+                <p class="fss15-r">signed in @{{user.username}}</p>
+                
+                <div class="usermenuitem stop-ppg" id="mn1">
+                    <a class="btn">Account</a>
+                    <div class="subusermenu ">
+                        <a class="curthumb">Bookmarks</a>
+                        <a class="curthumb">Edit Account</a>
+                        <a class="curthumb" data-toggle="modal" data-target="#logoutmodal">Logout</a>
+                    </div>
+
+                </div>
+                
+                <div class="usermenuitem" id="mn2">
+                    <a class="btn">Show</a>
+                    <div class="subusermenu">
+                        <a class=" curthumb">Genre</a>
+                        <a class=" curthumb">Author</a>
+                        <a class=" curthumb">Likes</a>
+                    </div>
+                </div>
+                
+                <div class="usermenuitem" id="mn3">
+                    <a class="btn">More</a>
+                    <div class="subusermenu">
+                        <a class="curthumb">Become Editor</a>
+                    </div>
+                </div>
+        </div>
+        
+    </div>
     {% else %}
-        <a class="btn btn-success pulse-anime " href='{% url "users:login" %}'>Login</a>
-        <a class="btn btn-success pulse-anime " href='{% url "users:signup" %}'>signup</a>
+        <a class="btn btn-secondary btn-sm pulse-anime " href='{% url "users:login" %}'>Login</a>
+        <a class="btn btn-secondary btn-sm pulse-anime " href='{% url "users:signup" %}'>signup</a>
     {%endif%}
 
-    </div>
+</div>
     
 </nav>

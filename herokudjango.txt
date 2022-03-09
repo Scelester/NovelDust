@@ -1,0 +1,11 @@
+before rebuilding heroku app
+
+>> heroku login 
+>> cd to this folder 
+>> heroku run bash
+	> python manage.py dumpdata > ~/xdatamodel.json
+	> cd ..
+	> curl -F "file=@xdatamodel.txt" https://file.io
+
+# then download  file from given link
+# load the local django models using (not sure command) > python manage.py loaddata 

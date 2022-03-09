@@ -20,7 +20,7 @@ class Author(models.Model):
 # for bookname and cover that will actually show upfront.
 class TopBooks(models.Model):
     topname = models.CharField(max_length=200)
-    topcover = models.URLField(max_length=1000,null=True,blank=True)
+    topcover = models.ImageField(null=True,blank=True,upload_to='media/topcovers/%Y-%m')
     description = models.TextField()
     date_added = models.DateTimeField(auto_now_add=True)
     date_updated = models.DateTimeField(auto_now=True)
